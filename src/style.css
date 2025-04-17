@@ -1,0 +1,77 @@
+* {margin: 0;padding: 0;}
+.App {display: flex;justify-content: start;align-items: center;text-align: center;}
+
+:root {
+  --principal: #1a2730;
+  --secundaria: #45586c;
+  --terciaria: #424048;
+  --background: #b0cee2;
+  --destaque: #a63e1b;
+  --hover: #e95d2c;
+  --detalhes: #f8cc53;
+  --botao: #e7ad0c;
+  --branco: #f2f2f2;
+  --preto: #0a0a0a;
+  --pelicula: rgba(26, 39, 48, 0.75);
+}
+
+/* =========================== */
+/* ======= COMPONENTES ======= */
+/* =========================== */
+
+/* === MENU RESPONSIVO === */
+.nav-menu {list-style: none;display: flex;gap: 20px;padding: 0;margin: 0;}
+.nav-menu li {display: inline-block;}
+.nav-menu a {text-decoration: none;color: var(--principal);font-size: 1.2em;padding: 8px 12px;transition: color 0.3s ease;}
+.nav-menu a:hover {color: var(--preto);}
+/* Estilos para o botão de menu no mobile */
+.menu-btn {display: none;font-size: 2rem;background: none;border: none;cursor: pointer;}
+.menu-btn {color: var(--preto);}
+.menu-btn {padding-right: 15px;}
+@media (max-width: 768px) {
+  .menu-btn {display: block;}
+  .nav-menu {display: none;flex-direction: column;position: absolute;top: 12vh;left: 0;
+    width: 100%;box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);padding: 10px 0;border: 1px solid #0a0a0a;}
+  .nav-menu.open {background: var(--pelicula);display: flex;z-index: 10;}
+  .nav-menu li {text-align: center;padding: 10px 0;}
+  .nav-menu a {color: var(--branco);}
+}
+
+/* === MENU RESPONSIVO === */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================== */
+/* === FIM DOS COMPONENTES === */
+/* =========================== */
+
+
+
+
+
+/* =========================== */
+/* ====== PAGINAS ============ */
+/* =========================== */
+
+
+
+
+
+/* =========================== */
+/* ====== FIM DAS PAGINAS ==== */
+/* =========================== */
+
+
