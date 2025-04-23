@@ -1,5 +1,5 @@
 * {margin: 0;padding: 0;}
-.App {display: flex;justify-content: start;align-items: center;text-align: center;}
+.App {display: flex;flex-direction: column;justify-content: start;align-items: center;text-align: center;}
 
 :root {
   --principal: #1a2730;
@@ -20,6 +20,7 @@
 /* =========================== */
 
 /* === MENU RESPONSIVO === */
+
 .nav-menu {list-style: none;display: flex;gap: 20px;padding: 0;margin: 0;}
 .nav-menu li {display: inline-block;}
 .nav-menu a {text-decoration: none;color: var(--principal);font-size: 1.2em;padding: 8px 12px;transition: color 0.3s ease;}
@@ -37,27 +38,114 @@
   .nav-menu a {color: var(--branco);}
 }
 
-/* === MENU RESPONSIVO === */
+/* === FIM MENU RESPONSIVO === */
+/* === ============ === */
+/* === BOTÃO === */
 
+.button-primary {display: inline-block;padding: 10px 20px;background-color: var(--botao);
+  color: var(--branco);font-weight: bold;text-align: center;cursor: pointer;border-radius: 5px;
+  transition: background-color 0.3s;user-select: none;}
+.button-primary:hover {background-color: var(--hover);}
+.button-secondary {display: inline-block;padding: 10px 20px;background-color: transparent;
+  color: var(--botao);font-weight: bold;text-align: center;cursor: pointer;border: 1px solid var(--botao);
+  border-radius: 5px;transition: background-color 0.3s;user-select: none;}
+.button-secondary:hover {background-color: var(--hover);color: var(--branco);border: 1px solid var(--hover);}
 
+/* === FIM BOTÃO === */
+/* === ============ === */
+/* === INPUT === */
 
+.input {padding: 10px 15px;border: 1px solid var(--background);border-radius: 6px;font-size: 16px;
+  background-color: transparent;transition: border-color 0.2s, box-shadow 0.2s;outline: none;}
+.input:focus {border-color: var(--secundaria);box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); /* efeito de foco suave */
+  background-color: var(--branco);}
 
+/* === FIM INPUT === */
+/* === ============ === */
+/* === FORM LEAD === */
 
+.form-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid var(--branco);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
 
+@media (max-width: 480px) {
+  .form-container {
+    padding: 16px;
+    margin: 20px 16px;
+  }
+}
 
+/* === FIM FORM LEAD === */
+/* === ==================== === */
+/* === DIV ANIMATION SCROLL === */
 
+.scroll-animate {
+  width: 100%;
+  transition: all 0.6s ease-out;
+  opacity: 0;
+}
+/* Estado padrão (escondido) */
+.scroll-animate.hidden {
+  opacity: 0;
+}
+/* Animações */
+.animate-fade-in {
+  opacity: 1;
+  transform: none;
+}
+.animate-slide-up {
+  opacity: 1;
+  transform: translateY(0);
+}
+.scroll-animate.animate-slide-up.hidden {
+  transform: translateY(20px);
+}
+.animate-slide-left {
+  opacity: 1;
+  transform: translateX(-10vw);
+}
+.scroll-animate.animate-slide-left.hidden {
+  transform: translateX(0);
+}
+.animate-slide-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+.scroll-animate.animate-slide-right.hidden {
+  transform: translateX(40px);
+}
+.animate-zoom-in {
+  opacity: 1;
+  transform: scale(1);
+}
+.scroll-animate.animate-zoom-in.hidden {
+  transform: scale(0.8);
+}
+.animate-flip {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+.scroll-animate.animate-flip.hidden {
+  transform: rotateY(90deg);
+}
 
-
-
-
-
-
+/* === FIM DIV ANIMATION SCROLL === */
 
 
 /* =========================== */
 /* === FIM DOS COMPONENTES === */
 /* =========================== */
-
+.height {height: 120vh;}
 
 
 
